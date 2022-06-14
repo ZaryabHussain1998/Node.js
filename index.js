@@ -29,7 +29,50 @@ http.createServer((req,resp)=>{
    
    console.log(regular(5));
    const arrowpure = (a)=>a*4;
-   console.log(arrowpure(5));*/
+   console.log(arrowpure(5));
+
+   //color package installed,imported and used
    console.log("package.json")
+   const colors = require('colors');
+   console.log("hello".red);
+   
+   //chalk package installed,imported and used
+   const chalk = require('chalk');
+   const log = console.log;
+   
+   // Combine styled and normal strings
+   log(chalk.blue('Hello') + ' World' + chalk.red('!'));
+   
+   // Compose multiple styles using the chainable API
+   log(chalk.black.bgRed.bold('Hello world!'));
+   
+   // Pass in multiple arguments
+   log(chalk.blue('Hello', 'World!', 'Foo', 'bar', 'biz', 'baz'));
+
+   //file imported for API response
+  const http = require('http');
+  const data = require('./data');
+  
+  http.createServer((req,resp)=>{
+  resp.writeHead(200,{'Content-type':'application\json'});
+  resp.write(JSON.stringify({name:'Zaryab Hussain',email:'zaryabhussain72@gmail.com'}));
+  resp.end();
+  }).listen(5000);
+
+  //input from cmd
+  console.log(process.argv[3])*/
+
+  //process.argv usage
+  //1st create file(writefilesync) 2nd file name 3rd file inner text
+  const fs = require('fs');
+  const input = process.argv;
+  if(input[2]== 'add')
+  {
+      fs.writeFileSync(input[3],input[4])
+  }else if
+
+  fs.writeFileSync(input[2],input[3]);
+
+
 
    
