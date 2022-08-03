@@ -4,4 +4,4 @@ const data=[
     {name:'Zaryab Hussain2',email:'zaryabhussain72@gmail.com'},
     {name:'Zaryab Hussain3',email:'zaryabhussain72@gmail.com'}
 ]
-module.exportrs=data;
+module.exports=data;
